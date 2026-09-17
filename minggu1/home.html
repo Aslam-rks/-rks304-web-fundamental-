@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minggu-1 </title>
+
+<style>
+
+  /*  RESET DASAR  */
+  * { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  .wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+
+  /*  NAVBAR  */
+  .navbar{
+    background: #2b2b2b;
+  }
+
+  .navbar .wrap{
+    display: flex;              /* logo & menu sejajar */
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .navbar .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .5px;
+  }
+
+  .navbar .logo span{ color: #2fa87f; } /* aksen hijau di logo */
+
+  .navbar .nav-links{
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar .nav-links a{
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .navbar .nav-links a:hover{ color: #fff; }
+
+  .navbar .nav-links a.active{ color: #e2664a; } /* menu yang lagi aktif */
+
+
+  /* tengah halaman */
+  .hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 70px 32px;
+  text-align: left;
+  max-width: 1140px;   
+  margin: 0 auto;       
+  }
+
+.hero-text{
+  max-width: 480px;
+  }
+
+.hero-text p{
+  margin: 0 auto 26px 0;   /* hapus auto-center bawaan versi lama */
+  }
+
+.hero-photo{
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;      /* bulat, gaya foto profil */
+  object-fit: cover;
+  flex-shrink: 0;           /* biar ukurannya gak ikut menyusut saat layar sempit */
+  }
+
+.btn{
+  display: inline-block;
+  background-color: #73be40;   /* <-- ini yang bikin warna hijau */
+  color: #fff;
+  text-decoration: none;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 34px;
+  border: none;
+  }  
+
+  /*  "ABOUT" 2 KOLOM  */
+  
+  .tentang {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  }
+  .tentang-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  }
+
+  .tentang-col {
+  flex: 1;
+  min-width: 250px; /* biar tetap rapi kalau layar kecil */
+  }
+
+  /*  RESPONSIVE (layar kecil)  */
+  @media (max-width: 720px){
+    .navbar .nav-links{ display: none; } /* disederhanakan, bisa diganti hamburger menu nanti */
+    .about{ grid-template-columns: 1fr; }
+    .about-photo{ order: -1; min-height: 220px; } /* foto duluan di atas saat mobile */
+  }
+
+  
+
+</style>
+</head>
+
+<body>
+
+  <!--  NAVBAR  -->
+  <nav class="navbar">
+    <div class="wrap">
+      <a href="home.html" class="logo">Aslam</a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="portofolio2.html">Portfolio</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--  HERO  -->
+  <header class="hero">
+    <div class="hero-text">
+      <p class="label">Halo, saya</p>
+      <h1>MUHAMMAD ASLAM</h1>
+      <p>Mahasiswa Polibatam.</p>
+      <a href="kontak.html" class="btn">Hubungi</a>
+    </div>
+
+    <img src="pp.jpeg" alt="Foto profil" class="hero-photo">
+  </header>
+
+  <!--  tentang -->
+  <div class="tentang">
+  <h2>Tentang Saya</h2>
+  <div class="tentang-columns">
+    <div class="tentang-col">
+      <h4>Bidang Keahlian:</h4>
+      <ul>
+        <li>Cyber Forensic ( umpama )</li>
+        <li>Penetretion Testing ( umpama )</li>
+        <li>Public Speaking ( umpama )</li>
+      </ul>
+    </div>
+
+    <div class="tentang-col">
+      <h4>Riwayat Pendidikan:</h4>
+      <ul>
+        <li>SDIT Fajar Ilahi 2 Bengkong</li>
+        <li>MTs Imam Ibnu Katsir Pekanbaru</li>
+        <li>MA Imam Ibnu Katsir Pekanbaru</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

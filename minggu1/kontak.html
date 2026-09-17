@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadallaut</title>
+
+<style>
+
+  /* ============ RESET DASAR ============ */
+  * { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  .wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+
+  .navbar{
+    background: #2b2b2b;
+  }
+
+  .navbar .wrap{
+    display: flex;              /* logo & menu sejajar */
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .navbar .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .5px;
+  }
+
+  .navbar .logo span{ color: #2fa87f; } /* aksen hijau di logo */
+
+  .navbar .nav-links{
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar .nav-links a{
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .navbar .nav-links a:hover{ color: #fff; }
+
+  .navbar .nav-links a.active{ color: #e2664a; } /* menu yang lagi aktif */
+
+  
+ 
+  /* ============ RESPONSIVE (layar kecil) ============ */
+  @media (max-width: 720px){
+    .navbar .nav-links{ display: none; } /* disederhanakan, bisa diganti hamburger menu nanti */
+    .about{ grid-template-columns: 1fr; }
+    .about-photo{ order: -1; min-height: 220px; } /* foto duluan di atas saat mobile */
+  }
+    :root {
+    --ink: #23241f;
+    --paper: #f6f4ee;
+    --line: #d9d5c8;
+    --accent: #2f5d50;
+    --accent-soft: #e4ede9;
+    --danger: #b3492f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .intro {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 32px;
+  }
+
+  .intro h1 {
+    font-size: 2.1rem;
+    margin: 0 0 12px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+  }
+
+  .intro p {
+    margin: 0;
+    max-width: 46ch;
+    color: #55564d;
+    font-size: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  label {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  label .req {
+    color: var(--danger);
+    font-weight: 400;
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background-color: #fff;
+    color: var(--ink);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .hint {
+    font-size: 0.82rem;
+    color: #7a7b70;
+  }
+
+  .error-msg {
+    font-size: 0.82rem;
+    color: var(--danger);
+    display: none;
+  }
+
+  .field.invalid input,
+  .field.invalid select,
+  .field.invalid textarea {
+    border-color: var(--danger);
+  }
+
+  .field.invalid .error-msg {
+    display: block;
+  }
+
+  .button[type="submit"] {
+    align-self: flex-start;
+    margin-top: 12px;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    }
+
+  button[type="submit"]:hover {
+    background-color: #244a40;
+  }
+
+  .status {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 4px;
+    background-color: var(--accent-soft);
+    border: 1px solid var(--accent);
+    display: none;
+    font-size: 0.95rem;
+  }
+
+  .status.show {
+    display: block;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="wrap">
+      <a href="home.html" class="logo">Aslam</a>
+      <ul class="nav-links">
+        <li><a href="contoh-landing.html">Home</a></li>
+        <li><a href="portofolio2.html">Portfolio</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  
+  <div class="wrap">
+    <div class="intro">
+      <h1>Mau Apa?</h1>
+      <p>Isi formulir di bawah ini untuk konsultasi, kolaborasi , atau cuma nanya.</p>
+    </div>
+
+    <form id="contactForm" novalidate>
+
+      <div class="field" data-field="nama">
+        <label for="nama">Nama <span class="req">*</span></label>
+        <input type="text" id="nama" name="nama" placeholder="cth. Aslam" required>
+        <span class="error-msg">Nama wajib diisi.</span>
+      </div>
+
+      <div class="field" data-field="email">
+        <label for="email">Alamat Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        <span class="error-msg">Masukkan alamat email yang valid.</span>
+      </div>
+
+      <div class="field" data-field="kategori">
+        <label for="kategori">Keperluan <span class="req">*</span></label>
+        <select id="kategori" name="kategori" required>
+          <option value="" disabled selected>Pilih </option>
+          <option value="konsultasi">pilih1</option>
+          <option value="kolaborasi">pilih2</option>
+          <option value="pertanyaan">pilih3</option>
+        </select>
+        <span class="error-msg">Pilih keperluanmu.</span>
+      </div>
+
+
+      <div class="field" data-field="pesan">
+        <label for="pesan">Pesan <span class="req">*</span></label>
+        <textarea id="pesan" name="pesan" placeholder="mau apa?" required></textarea>
+        <span class="error-msg">Pesan tidak boleh kosong.</span>
+      </div>
+
+      <button type="submit">Kirim</button>
+
+      <div class="status" id="statusBox"></div>
+    </form>
+  </div>
+
+
+</body>
+</html>

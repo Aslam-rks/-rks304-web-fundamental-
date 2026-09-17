@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadallaut</title>
+
+<style>
+
+  /* ============ RESET DASAR ============ */
+  * { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  .wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+
+  /* ============ 1. NAVBAR GELAP ============ */
+  .navbar{
+    background: #2b2b2b;
+  }
+
+  .navbar .wrap{
+    display: flex;              /* logo & menu sejajar */
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .navbar .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .5px;
+  }
+
+  .navbar .logo span{ color: #2fa87f; } /* aksen hijau di logo */
+
+  .navbar .nav-links{
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar .nav-links a{
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .navbar .nav-links a:hover{ color: #fff; }
+
+  .navbar .nav-links a.active{ color: #e2664a; } /* menu yang lagi aktif */
+
+
+  /* ============ 2. HERO (tengah halaman) ============ */
+  .hero{
+    text-align: center;
+    padding: 70px 20px 60px;
+  }
+
+    .portofolio {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  text-align: center;
+}
+
+.portofolio h2 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+.portofolio-intro {
+  color: #666;
+  margin: 0 0 40px;
+}
+
+.portofolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.portofolio-card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 320px;
+  text-align: left;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.portofolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.portofolio-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background-color: #1a1a1a; /* biar area kosong di sekitar gambar nggak putih polos */
+  display: block;
+}
+
+.portofolio-content {
+  padding: 20px;
+}
+
+.portofolio-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.portofolio-content p {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  background-color: #eef6e8;
+  color: #4c8a2b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 1.5px solid #73be40;
+  color: #73be40;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.btn-outline:hover {
+  background-color: #73be40;
+  color: #fff;
+}
+
+  /* ============ 3. SECTION "ABOUT" 2 KOLOM ============ */
+  .about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* dua kolom sama lebar */
+    min-height: 340px;
+  }
+
+  .about-text{
+    background: #eae3d4;             /* warna krem sebagai pembeda kolom kiri */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 60px;
+  }
+
+  .about-text h2{
+    font-size: 1.3rem;
+    letter-spacing: .5px;
+    margin: 0 0 18px;
+    color: #1c2333;
+  }
+
+  .about-text p{
+    font-size: .92rem;
+    color: #444;
+  }
+
+  .about-photo{
+    background: #ccc url("images/foto.jpg") center/cover no-repeat;
+    /* ganti "images/foto.jpg" dengan path foto kamu sendiri */
+    min-height: 340px;
+  }
+
+
+  /* ============ RESPONSIVE (layar kecil) ============ */
+  @media (max-width: 720px){
+    .navbar .nav-links{ display: none; } /* disederhanakan, bisa diganti hamburger menu nanti */
+    .about{ grid-template-columns: 1fr; }
+    .about-photo{ order: -1; min-height: 220px; } /* foto duluan di atas saat mobile */
+  }
+
+</style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="wrap">
+      <a href="home.html" class="logo">Aslam</a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="portofolio2.html">Portfolio</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="portofolio" id="portofolio">
+  <h2>Portofolio</h2>
+  <p class="portofolio-intro">Beberapa proyek yang pernah saya kerjakan.</p>
+
+  <div class="portofolio-grid">
+
+    <div class="portofolio-card">
+      <img src="tiramisu.png" alt="Tiramisu">
+      <div class="portofolio-content">
+        <h3>Tiramisu</h3>
+        <p>Tiramisu adalah aplikasi desktop berbasis Python yang menggunakan kriptografi modern yang berguna untuk enkripsi dekripsi file</p>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+        </div>
+        <a href="#" class="btn-outline">Lihat Proyek</a>
+      </div>
+    </div>
+
+    <div class="portofolio-card">
+      <img src="gambar/proyek2.jpg" alt="Aplikasi Pendataan Sederhana">
+      <div class="portofolio-content">
+        <h3>belum</h3>
+        <p>belum</p>
+        <div class="tag-list">
+          <span class="tag">belum</span>
+          <span class="tag">belum</span>
+        </div>
+        <a href="#" class="btn-outline">Lihat Proyek</a>
+      </div>
+    </div>
+
+    <div class="portofolio-card">
+      <img src="gambar/proyek3.jpg" alt="Desain UI Mobile App">
+      <div class="portofolio-content">
+        <h3>belum</h3>
+        <p>belum</p>
+        <div class="tag-list">
+          <span class="tag">belum</span>
+          <span class="tag">belum</span>
+        </div>
+        <a href="#" class="btn-outline">Lihat Proyek</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
+</body>
+</html>
