@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Tokoku</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-900">
+<div class="flex min-h-screen">
+
+  <aside class="w-64 bg-slate-900 text-white flex flex-col">
+    <div class="px-6 py-5 border-b border-white/10">
+      <span class="text-lg font-extrabold tracking-tight">Tokoku</span>
+    </div>
+    <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
+      <a href="dashboard.html" class="block px-3 py-2 rounded-lg ">Dashboard</a>
+      <a href="products.html" class="block px-3 py-2 rounded-lg ">Products</a>
+      <a href="#" class="block px-3 py-2 rounded-lg ">Users</a>
+      <a href="#" class="block px-3 py-2 rounded-lg ">Setting</a>
+    </nav>
+    <div class="px-3 py-4 border-t border-white/10">
+      <a href="index.html" class="block px-3 py-2 rounded-lg text-red-300  ">Logout</a>
+    </div>
+  </aside>
+
+  <div class="flex-1 flex flex-col">
+    <header class="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between">
+      <h1 class="text-lg font-semibold">Produk</h1>
+      <div class="flex items-center gap-3">
+        <span class="text-sm font-medium">Admin</span>
+      </div>
+    </header>
+
+    <main class="flex-1 px-8 py-8">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold">Manajemen produk</h2>
+            <a href="tambah produk.html" ...>tambah product</a>
+        </div>
+        
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="px-5 py-3 font-medium">No</th>
+                <th class="px-5 py-3 font-medium">nama</th>
+                <th class="px-5 py-3 font-medium">stok</th>
+                <th class="px-5 py-3 font-medium">aksi</th>
+
+              </tr>
+            </thead>
+
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="px-5 py-3">1</td>
+                <td class="px-5 py-3">Kemeja</td>
+                <td class="px-5 py-3">24</td>
+                <td class="px-5 py-3 space-x-3">
+                  <a href="edit produk.html" class="text-amber-600 hover:underline">edit</a>
+                  <button class="text-red-500 hover:underline">hapus</button>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+    </main>
+
+    <footer class="px-8 py-4 border-t border-slate-200 text-sm text-slate-500">
+      © 2026 Tokoku. All rights reserved.
+    </footer>
+  </div>
+
+</div>
+</body>
+</html>

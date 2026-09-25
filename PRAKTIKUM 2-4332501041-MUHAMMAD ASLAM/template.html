@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starter Template - TokokuAdmin</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style> body { font-family: 'Plus Jakarta Sans', sans-serif; } </style>
+</head>
+<body class="bg-[#F5F6F8] text-[#1D2939]">
+<div class="flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#101828] text-white flex flex-col">
+    <div class="px-6 py-5 border-b border-white/10">
+      <span class="text-lg font-extrabold tracking-tight">Tokoku<span class="text-[#E8A33D]">Admin</span></span>
+    </div>
+    <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
+      <a href="dashboard.html" class="block px-3 py-2 rounded-lg hover:bg-[#1D2939] transition">Dashboard</a>
+      <a href="products.html" class="block px-3 py-2 rounded-lg hover:bg-[#1D2939] transition">Products</a>
+      <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#1D2939] transition">Users</a>
+      <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#1D2939] transition">Setting</a>
+    </nav>
+    <div class="px-3 py-4 border-t border-white/10">
+      <a href="index.html" class="block px-3 py-2 rounded-lg text-red-300 hover:bg-[#1D2939] transition text-sm">Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main area -->
+  <div class="flex-1 flex flex-col">
+    <header class="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between">
+      <h1 class="text-lg font-semibold">Starter Template</h1>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-[#E8A33D] flex items-center justify-center text-white font-semibold text-sm">A</div>
+        <span class="text-sm font-medium">Admin</span>
+      </div>
+    </header>
+
+    <!-- ISI KONTEN: ganti bagian ini saja untuk halaman lain -->
+    <main class="flex-1 px-8 py-8">
+      <h2 class="text-2xl font-bold mb-3">Judul Halaman</h2>
+      <p class="text-slate-600 max-w-2xl leading-relaxed">
+        Ini adalah paragraf contoh untuk starter template. Header, navigasi, dan footer
+        tetap sama di semua halaman — hanya bagian konten di dalam &lt;main&gt; ini yang berubah.
+      </p>
+    </main>
+    <!-- akhir ISI KONTEN -->
+
+    <footer class="px-8 py-4 border-t border-slate-200 text-sm text-slate-500">
+      © 2026 TokokuAdmin. All rights reserved.
+    </footer>
+  </div>
+
+</div>
+</body>
+</html>
